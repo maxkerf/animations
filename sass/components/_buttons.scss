@@ -1,0 +1,17 @@
+.btn {
+	background-color: $color-secondary;
+	color: $color-primary;
+	font-size: 3rem;
+	cursor: pointer;
+	padding: 1.85rem 3rem;
+	border-radius: 5rem;
+
+	&--grow {
+		transform: scale(1);
+		transition: transform 400ms;
+
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+}
