@@ -1,0 +1,27 @@
+.form {
+	&__group {
+		label {
+			color: $color-text;
+			font-weight: bold;
+			margin-left: 2rem;
+			font-size: 1.2rem;
+		}
+		input {
+			border: 2px solid $color-white;
+			border-radius: 2rem;
+			color: $color-text;
+			font-size: 2.5rem;
+			padding: 0.5rem 1.5rem;
+			width: 100%;
+			transition: background-color 400ms;
+			&:focus {
+				border-color: $color-text;
+			}
+			&:not(:focus):invalid {
+				background-color: $color-danger;
+				border-color: $color-danger;
+				color: $color-text--invalid;
+			}
+		}
+	}
+}

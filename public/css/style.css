@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-color: aliceblue;
+  background-color: #ebf6f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,15 +51,58 @@ a:hover {
 .btn--grow:hover {
   transform: scale(1.15);
 }
+.btn--animate-sibling:active + .ball {
+  transform: scale(1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form__group label {
+  color: #6300a0;
+  font-weight: bold;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+.form__group input {
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  color: #6300a0;
+  font-size: 2.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  transition: background-color 400ms;
+}
+.form__group input:focus {
+  border-color: #6300a0;
+}
+.form__group input:not(:focus):invalid {
+  background-color: #b20a37;
+  border-color: #b20a37;
+  color: #fff;
+}
 
 .menu {
   text-align: center;
 }
 .menu ol {
-  margin-top: 1rem;
   padding: 0;
   list-style-type: none;
 }
 .menu__link {
+  margin-top: 0.5rem;
   font-size: 1.25rem;
+}
+
+.ball {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 12.5rem;
+  background-color: #15dea5;
+  transform: scale(0.1);
+  transition: transform 4000ms;
 }
