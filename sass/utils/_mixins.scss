@@ -1,10 +1,14 @@
-@mixin box($width: $box-size, $height: $box-size, $bg-color: $color-primary) {
+@mixin rect($width: $rect-width, $height: $rect-height) {
 	width: $width;
 	height: $height;
-	background-color: $bg-color;
+	background-color: $color-primary;
 }
 
-@mixin ball($ball-size: $ball-size, $bg-color: $color-primary) {
-	@include box($ball-size, $ball-size, $bg-color);
-	border-radius: $ball-size * 0.5;
+@mixin square($square-size: $square-size) {
+	@include rect($square-size, $square-size);
+}
+
+@mixin disc($disc-size: $disc-size) {
+	@include square($disc-size);
+	border-radius: $disc-size * 0.5;
 }

@@ -107,10 +107,10 @@ a:hover {
 }
 
 .ball {
-  width: 3rem;
-  height: 3rem;
+  width: 10rem;
+  height: 10rem;
   background-color: #15dea5;
-  border-radius: 1.5rem;
+  border-radius: 5rem;
 }
 .ball--grow {
   width: 25rem;
@@ -191,26 +191,23 @@ a:hover {
 }
 
 .form__group label {
-  color: #6300a0;
+  color: #011c37;
   font-weight: bold;
   margin-left: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .form__group input {
-  border: 2px solid #fff;
-  border-radius: 2rem;
-  color: #6300a0;
+  border: none;
+  border-radius: 5rem;
+  background-color: #011c37;
+  color: #15dea5;
   font-size: 2.5rem;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 2rem;
   width: 100%;
   transition: background-color 400ms;
 }
-.form__group input:focus {
-  border-color: #6300a0;
-}
 .form__group input:not(:focus):invalid {
   background-color: #b20a37;
-  border-color: #b20a37;
   color: #fff;
 }
 

@@ -1,5 +1,5 @@
 .box {
-	@include box;
+	@include square;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,12 +54,12 @@
 	}
 
 	&--skew {
-		@include box(5rem);
+		@include rect;
 		transition: transform 330ms ease-in-out;
 	}
 
 	&--perspective {
-		@include box(5rem);
+		@include rect;
 		transition: transform 330ms ease-in-out;
 	}
 }
