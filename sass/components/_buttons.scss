@@ -13,8 +13,8 @@
 	&--grow {
 		transform: scale(1);
 
-		&:hover {
-			transform: scale(1.15);
+		&:active {
+			transform: scale(1.5);
 		}
 	}
 
@@ -27,7 +27,7 @@
 	&--sec-action {
 		background-color: $color-btn-start;
 
-		&:hover {
+		&:active {
 			background-color: $color-btn-end;
 		}
 	}
@@ -49,6 +49,57 @@
 			transform: scale(1);
 			span {
 				transform: translateY(0);
+			}
+		}
+	}
+
+	&--rotate-boxes {
+		&:active + .boxes {
+			> .box {
+				&--rot-degrees {
+					transform: rotate(-180deg);
+				}
+
+				&--rot-turns {
+					transform: rotate(1turn);
+				}
+			}
+		}
+	}
+
+	&--rotate-reveal-box {
+		&:active + .box {
+			transform: scale(1) rotate(0deg);
+			span {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&--skew-boxes {
+		&:active + .boxes {
+			> .box--skew {
+				transform: skew(45deg, 45deg);
+				&-X {
+					transform: skewX(45deg);
+				}
+				&-Y {
+					transform: skewY(45deg);
+				}
+			}
+		}
+	}
+
+	&--perspective-boxes {
+		&:active + .boxes {
+			> .box--perspective {
+				transform: perspective(150px) rotateX(45deg);
+				&-small {
+					transform: perspective(75px) rotateX(45deg);
+				}
+				&-big {
+					transform: perspective(300px) rotateX(45deg);
+				}
 			}
 		}
 	}

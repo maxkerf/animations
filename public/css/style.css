@@ -51,8 +51,8 @@ a:hover {
 .btn--grow {
   transform: scale(1);
 }
-.btn--grow:hover {
-  transform: scale(1.15);
+.btn--grow:active {
+  transform: scale(1.5);
 }
 .btn--grow-ball:active + .ball {
   transform: scale(1);
@@ -60,7 +60,7 @@ a:hover {
 .btn--sec-action {
   background-color: rgba(1, 28, 55, 0);
 }
-.btn--sec-action:hover {
+.btn--sec-action:active {
   background-color: #011c37;
 }
 .btn--stretch-box:active + .box {
@@ -74,6 +74,36 @@ a:hover {
 }
 .btn--reveal-box:active + .box span {
   transform: translateY(0);
+}
+.btn--rotate-boxes:active + .boxes > .box--rot-degrees {
+  transform: rotate(-180deg);
+}
+.btn--rotate-boxes:active + .boxes > .box--rot-turns {
+  transform: rotate(1turn);
+}
+.btn--rotate-reveal-box:active + .box {
+  transform: scale(1) rotate(0deg);
+}
+.btn--rotate-reveal-box:active + .box span {
+  transform: translateY(0);
+}
+.btn--skew-boxes:active + .boxes > .box--skew {
+  transform: skew(45deg, 45deg);
+}
+.btn--skew-boxes:active + .boxes > .box--skew-X {
+  transform: skewX(45deg);
+}
+.btn--skew-boxes:active + .boxes > .box--skew-Y {
+  transform: skewY(45deg);
+}
+.btn--perspective-boxes:active + .boxes > .box--perspective {
+  transform: perspective(150px) rotateX(45deg);
+}
+.btn--perspective-boxes:active + .boxes > .box--perspective-small {
+  transform: perspective(75px) rotateX(45deg);
+}
+.btn--perspective-boxes:active + .boxes > .box--perspective-big {
+  transform: perspective(300px) rotateX(45deg);
 }
 
 .ball {
@@ -95,23 +125,62 @@ a:hover {
   width: 15rem;
   height: 15rem;
   background-color: #15dea5;
-  transition: transform 400ms ease-in-out;
-}
-.box--reveal {
-  transform: scale(0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  transition: transform 330ms ease-in-out;
-}
-.box--reveal span {
+  text-align: center;
   color: #011c37;
   font-size: 2.5rem;
   font-weight: bold;
+  user-select: none;
+}
+.box--stretch {
+  transition: transform 330ms ease-in-out;
+}
+.box--move {
+  transition: transform 330ms ease-in-out;
+}
+.box--reveal {
+  transform: scale(0.1);
+  transition: transform 330ms ease-in-out;
+  overflow: hidden;
+}
+.box--reveal span {
   display: inline-block;
   transform: translateY(300%);
   transition: transform 280ms ease-out 50ms;
+}
+.box--rot-degrees {
+  transform: rotate(0deg);
+  transition: transform 400ms ease-in-out;
+}
+.box--rot-turns {
+  background-color: #011c37;
+  color: #15dea5;
+  transform: rotate(0turn);
+  transition: transform 400ms ease-in-out;
+}
+.box--rotate-reveal {
+  transform: scale(0.1) rotate(-90deg);
+  transition: transform 330ms ease-in-out;
+  overflow: hidden;
+}
+.box--rotate-reveal span {
+  display: inline-block;
+  transform: translateY(300%);
+  transition: transform 280ms ease-out 50ms;
+}
+.box--skew {
+  width: 5rem;
+  height: 15rem;
+  background-color: #15dea5;
+  transition: transform 330ms ease-in-out;
+}
+.box--perspective {
+  width: 5rem;
+  height: 15rem;
+  background-color: #15dea5;
+  transition: transform 330ms ease-in-out;
 }
 
 .container--column-reverse {
@@ -143,6 +212,11 @@ a:hover {
   background-color: #b20a37;
   border-color: #b20a37;
   color: #fff;
+}
+
+.boxes {
+  display: flex;
+  gap: 8rem;
 }
 
 .menu {

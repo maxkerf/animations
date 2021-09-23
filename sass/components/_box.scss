@@ -1,22 +1,65 @@
 .box {
 	@include box;
-	transition: transform 400ms ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: $color-secondary;
+	font-size: 2.5rem;
+	font-weight: bold;
+	user-select: none;
+
+	&--stretch {
+		transition: transform 330ms ease-in-out;
+	}
+
+	&--move {
+		transition: transform 330ms ease-in-out;
+	}
 
 	&--reveal {
 		transform: scale(0.1);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
 		transition: transform 330ms ease-in-out;
+		overflow: hidden;
 
 		span {
-			color: $color-secondary;
-			font-size: 2.5rem;
-			font-weight: bold;
 			display: inline-block;
 			transform: translateY(300%);
 			transition: transform 280ms ease-out 50ms;
 		}
+	}
+
+	&--rot-degrees {
+		transform: rotate(0deg);
+		transition: transform 400ms ease-in-out;
+	}
+
+	&--rot-turns {
+		background-color: $color-secondary;
+		color: $color-primary;
+		transform: rotate(0turn);
+		transition: transform 400ms ease-in-out;
+	}
+
+	&--rotate-reveal {
+		transform: scale(0.1) rotate(-90deg);
+		transition: transform 330ms ease-in-out;
+		overflow: hidden;
+
+		span {
+			display: inline-block;
+			transform: translateY(300%);
+			transition: transform 280ms ease-out 50ms;
+		}
+	}
+
+	&--skew {
+		@include box(5rem);
+		transition: transform 330ms ease-in-out;
+	}
+
+	&--perspective {
+		@include box(5rem);
+		transition: transform 330ms ease-in-out;
 	}
 }
