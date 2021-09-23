@@ -1,0 +1,10 @@
+@mixin box($box-size: $box-size, $bg-color: $color-primary) {
+	width: $box-size;
+	height: $box-size;
+	background-color: $bg-color;
+}
+
+@mixin ball($ball-size: $ball-size, $bg-color: $color-primary) {
+	@include box($ball-size, $bg-color);
+	border-radius: $ball-size * 0.5;
+}

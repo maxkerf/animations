@@ -1,0 +1,4 @@
+.box {
+	@include box;
+	transition: transform 400ms ease-in-out;
+}

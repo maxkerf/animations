@@ -1,0 +1,9 @@
+.ball {
+	@include ball;
+
+	&--grow {
+		@include ball(25rem);
+		transform: scale(0.1);
+		transition: transform 4000ms;
+	}
+}

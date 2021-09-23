@@ -1,13 +1,15 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/homeLink";
 @import "./components/buttons";
+@import "./components/ball";
+@import "./components/box";
 
 @import "./layout/container";
 @import "./layout/form";
 
 @import "./pages/index";
-@import "./pages/animateSibling";

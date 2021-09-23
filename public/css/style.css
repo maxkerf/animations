@@ -39,23 +39,59 @@ a:hover {
 .btn {
   background-color: #011c37;
   color: #15dea5;
+  border: 4px solid #011c37;
   font-size: 3rem;
+  white-space: nowrap;
   cursor: pointer;
   padding: 1.85rem 3rem;
   border-radius: 5rem;
+  transition: transform 450ms, background-color 300ms 150ms;
 }
 .btn--grow {
   transform: scale(1);
-  transition: transform 400ms;
 }
 .btn--grow:hover {
   transform: scale(1.15);
 }
-.btn--animate-sibling:active + .ball {
+.btn--grow-ball:active + .ball {
   transform: scale(1);
 }
+.btn--sec-action {
+  background-color: rgba(1, 28, 55, 0);
+}
+.btn--sec-action:hover {
+  background-color: #011c37;
+}
+.btn--stretch-box:active + .box {
+  transform: scale(2, 0.5);
+}
+.btn--move-box:active + .box {
+  transform: translate(50%, -25%);
+}
 
-.container {
+.ball {
+  width: 3rem;
+  height: 3rem;
+  background-color: #15dea5;
+  border-radius: 1.5rem;
+}
+.ball--grow {
+  width: 25rem;
+  height: 25rem;
+  background-color: #15dea5;
+  border-radius: 12.5rem;
+  transform: scale(0.1);
+  transition: transform 4000ms;
+}
+
+.box {
+  width: 15rem;
+  height: 15rem;
+  background-color: #15dea5;
+  transition: transform 400ms ease-in-out;
+}
+
+.container--column-reverse {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -96,13 +132,4 @@ a:hover {
 .menu__link {
   margin-top: 0.5rem;
   font-size: 1.25rem;
-}
-
-.ball {
-  width: 25rem;
-  height: 25rem;
-  border-radius: 12.5rem;
-  background-color: #15dea5;
-  transform: scale(0.1);
-  transition: transform 4000ms;
 }
