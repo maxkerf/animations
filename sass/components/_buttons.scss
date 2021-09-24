@@ -92,13 +92,23 @@
 
 	&--perspective-boxes {
 		&:active + .boxes {
-			> .box--perspective {
+			& > .box--perspective {
 				transform: perspective(150px) rotateX(45deg);
 				&-small {
 					transform: perspective(75px) rotateX(45deg);
 				}
 				&-big {
 					transform: perspective(300px) rotateX(45deg);
+				}
+			}
+		}
+	}
+
+	&--charge-progress-bar {
+		&:active {
+			& + .box--progress {
+				& > .box--progress__bar {
+					transform: scaleX(1);
 				}
 			}
 		}
