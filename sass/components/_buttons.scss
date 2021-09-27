@@ -131,6 +131,14 @@
 			transition: opacity 200ms;
 		}
 	}
+
+	&--reveal-img {
+		&:active + .img {
+			&::before {
+				opacity: 0;
+			}
+		}
+	}
 }
 
 .btn3d {
