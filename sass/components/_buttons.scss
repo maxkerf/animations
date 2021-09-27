@@ -99,8 +99,8 @@
 
 	&--charge-progress-bar {
 		&:active {
-			& + .box--progress {
-				& > .box--progress__bar {
+			& + .progress {
+				& > .progress__bar {
 					transform: scaleX(1);
 				}
 			}
@@ -142,8 +142,8 @@
 
 	&--charge-progress-bar-2 {
 		&:active {
-			& + .box--progress-2 {
-				& > .box--progress-2__bar {
+			& + .progress {
+				& > .progress__bar {
 					animation: progress-bar 3000ms;
 				}
 			}
