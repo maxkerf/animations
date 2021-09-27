@@ -19,6 +19,10 @@
 				background-color: $color-invalid;
 				color: $color-white;
 			}
+			&:not(:focus):valid {
+				background-color: $color-valid;
+				color: $color-white;
+			}
 		}
 	}
 }

@@ -1,13 +1,6 @@
 .btn {
-	background-color: $color-secondary;
-	color: $color-primary;
-	border: 4px solid $color-secondary;
-	font-size: 2.5rem;
-	white-space: nowrap;
-	cursor: pointer;
-	padding: 1rem 2rem;
-	border-radius: 5rem;
-	user-select: none;
+	@include btn;
+	border-radius: $btn-height/2;
 	transition: transform 450ms, background-color 300ms 150ms;
 
 	&--grow {
@@ -111,6 +104,92 @@
 					transform: scaleX(1);
 				}
 			}
+		}
+	}
+}
+
+.btn3d {
+	@include btn3d;
+	transform-origin: center bottom ($btn-height/2);
+
+	&:active {
+		transform: rotateX(-90deg);
+	}
+
+	&__facet {
+		@include facet;
+		&--on {
+			transform: rotateX(90deg) translateZ($btn-height/2);
+			background-color: $color-valid;
+		}
+		&--off {
+			transform: translateZ($btn-height/2);
+			background-color: $color-invalid;
+		}
+	}
+}
+
+.btn3d-HS {
+	@include btn3d;
+	height: $btn3d-height;
+
+	&:hover {
+		transform: rotateX(-270deg);
+	}
+
+	&__facet {
+		@include facet;
+		&--front-outside {
+			transform: translateZ($btn3d-height/2);
+			background-color: $color-secondary;
+		}
+		&--front-inside {
+			transform: translateZ($btn3d-height/2) rotateZ(180deg) rotateY(180deg);
+			background: url("../../public/img/hyperspace/top.jpg") center;
+		}
+		&--back-outside {
+			transform: rotateX(180deg) translateZ($btn3d-height/2);
+			background-color: $color-secondary;
+		}
+		&--back-inside {
+			transform: rotateX(180deg) translateZ($btn3d-height/2) rotateZ(180deg)
+				rotateY(180deg);
+			background: url("../../public/img/hyperspace/bottom.jpg") center;
+		}
+		&--top-outside {
+			transform: rotateX(90deg) translateZ($btn3d-height/2);
+			background-color: $color-secondary;
+		}
+		&--top-inside {
+			transform: rotateX(90deg) translateZ($btn3d-height/2) rotateZ(180deg)
+				rotateY(180deg);
+			background: url("../../public/img/hyperspace/center.jpg") center;
+		}
+		&--bottom-outside {
+			transform: rotateX(-90deg) translateZ($btn3d-height/2);
+			background-color: transparent;
+		}
+		&--bottom-inside {
+			transform: rotateX(-90deg) translateZ($btn3d-height/2);
+			background-color: transparent;
+		}
+		&--left-outside {
+			transform: rotateY(-90deg) translateZ($btn3d-height/2);
+			background-color: $color-secondary;
+		}
+		&--left-inside {
+			transform: rotateY(-90deg) translateZ($btn3d-height/2) rotateZ(90deg)
+				rotateY(180deg);
+			background: url("../../public/img/hyperspace/left.jpg") center;
+		}
+		&--right-outside {
+			transform: rotateY(90deg) translateZ($btn3d-height/2);
+			background-color: $color-secondary;
+		}
+		&--right-inside {
+			transform: rotateY(90deg) translateZ($btn3d-height/2) rotateZ(-90deg)
+				rotateY(180deg);
+			background: url("../../public/img/hyperspace/right.jpg") center;
 		}
 	}
 }

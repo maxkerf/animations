@@ -1,8 +1,24 @@
 .container {
-	&--column-reverse {
-		display: flex;
-		flex-direction: column-reverse;
-		align-items: center;
-		gap: 2rem;
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	&--col {
+		flex-direction: column;
+		&-rev {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&--perspective {
+		perspective: 500px;
+
+		&-HS {
+			perspective: 500px;
+			transition: perspective 500ms;
+
+			&:active {
+				perspective: 40px;
+			}
+		}
 	}
 }
