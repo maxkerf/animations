@@ -1,0 +1,56 @@
+$num_bars: 5;
+$anim_dur: 1000ms;
+$anim_delay: $anim_dur / $num_bars;
+
+.loader {
+	align-items: unset;
+
+	.container {
+		flex-direction: column;
+		width: 80vw;
+		padding: 4rem 0;
+	}
+
+	span {
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+
+	.load {
+		flex: 1;
+		width: 100%;
+		max-width: 16rem;
+		display: flex;
+		gap: 1.5rem;
+
+		&__bar {
+			background-color: $color-primary;
+			width: (100%) / $num_bars;
+			animation: bars $anim_dur backwards infinite ease-in-out alternate;
+
+			@for $i from 1 through $num_bars {
+				&--#{$i} {
+					animation-delay: $anim_delay * $i;
+				}
+				&--#{$i}-inv {
+					animation-delay: $anim_delay * $i + random(100) * 15ms;
+					animation-direction: alternate-reverse;
+					background-color: $color-secondary;
+
+					&:hover {
+						animation-play-state: paused;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes bars {
+	from {
+		transform: scaleY(0.5);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
