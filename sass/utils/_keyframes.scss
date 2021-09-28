@@ -52,3 +52,12 @@
 		transform: translateX(0);
 	}
 }
+
+@keyframes headshake-no {
+	25% {
+		transform: translateX($shake-intensity);
+	}
+	75% {
+		transform: translateX(-$shake-intensity);
+	}
+}

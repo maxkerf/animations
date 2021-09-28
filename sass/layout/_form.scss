@@ -14,15 +14,6 @@
 			font-size: 2.5rem;
 			padding: 1rem 2rem;
 			width: 100%;
-			transition: background-color 400ms;
-			&:not(:focus):invalid {
-				background-color: $color-invalid;
-				color: $color-white;
-			}
-			&:not(:focus):valid {
-				background-color: $color-valid;
-				color: $color-white;
-			}
 		}
 	}
 }

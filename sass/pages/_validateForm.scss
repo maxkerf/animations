@@ -1,0 +1,17 @@
+.validateForm {
+	.form {
+		&__group {
+			& input {
+				transition: background-color 400ms;
+				&:not(:focus):invalid {
+					background-color: $color-invalid;
+					color: $color-white;
+				}
+				&:not(:focus):valid {
+					background-color: $color-valid;
+					color: $color-white;
+				}
+			}
+		}
+	}
+}
