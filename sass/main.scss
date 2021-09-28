@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 
 @import "./base/base";
 @import "./base/typography";
@@ -16,3 +17,4 @@
 
 @import "./pages/index";
 @import "./pages/revealImage";
+@import "./pages/chargeProgressBar3";

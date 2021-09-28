@@ -1,5 +1,6 @@
 .progress {
-	@include rect(50rem, 2.5rem);
+	@include rect(80vw, 2.5rem);
+	max-width: 50rem;
 	background-color: transparent;
 	border: 3px solid $color-secondary;
 	padding: 0.25rem;
@@ -12,6 +13,10 @@
 
 		&--transparent {
 			opacity: 0;
+		}
+
+		&--animate {
+			animation: progress-bar-2 3000ms 150ms both;
 		}
 	}
 }

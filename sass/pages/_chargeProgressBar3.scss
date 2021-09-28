@@ -1,0 +1,11 @@
+.gift {
+	width: 80vw;
+	max-width: 50rem;
+	position: absolute;
+	animation: gift 0ms 3150ms both;
+
+	& img {
+		width: 100%;
+		vertical-align: middle;
+	}
+}
