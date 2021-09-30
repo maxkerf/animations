@@ -6,6 +6,6 @@
 		"sass": "sass --watch ./sass/main.scss ./public/css/style.css --no-source-map"
 	},
 	"repository": "https://github.com/maxkerf/animations.git",
-	"author": "Maxime Kerfourn <maxime.kerfourn@orange.fr>",
+	"author": "Maxime Kerfourn",
 	"license": "MIT"
 }

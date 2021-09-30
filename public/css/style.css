@@ -546,6 +546,7 @@ a:hover {
 .loader span {
   font-weight: bold;
   font-size: 1.25rem;
+  text-align: center;
 }
 .loader .load {
   flex: 1;
@@ -563,7 +564,7 @@ a:hover {
   animation-delay: 200ms;
 }
 .loader .load__bar--1-inv {
-  animation-delay: 815ms;
+  animation-delay: 455ms;
   animation-direction: alternate-reverse;
   background-color: #011c37;
 }
@@ -574,7 +575,7 @@ a:hover {
   animation-delay: 400ms;
 }
 .loader .load__bar--2-inv {
-  animation-delay: 1495ms;
+  animation-delay: 1390ms;
   animation-direction: alternate-reverse;
   background-color: #011c37;
 }
@@ -585,7 +586,7 @@ a:hover {
   animation-delay: 600ms;
 }
 .loader .load__bar--3-inv {
-  animation-delay: 960ms;
+  animation-delay: 630ms;
   animation-direction: alternate-reverse;
   background-color: #011c37;
 }
@@ -596,7 +597,7 @@ a:hover {
   animation-delay: 800ms;
 }
 .loader .load__bar--4-inv {
-  animation-delay: 1910ms;
+  animation-delay: 1835ms;
   animation-direction: alternate-reverse;
   background-color: #011c37;
 }
@@ -607,7 +608,7 @@ a:hover {
   animation-delay: 1000ms;
 }
 .loader .load__bar--5-inv {
-  animation-delay: 1735ms;
+  animation-delay: 1690ms;
   animation-direction: alternate-reverse;
   background-color: #011c37;
 }
